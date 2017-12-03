@@ -1,5 +1,6 @@
 package com.jrandom.dropwizard.example;
 
+import com.jrandom.dropwizard.example.resources.UserListResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -17,13 +18,14 @@ public class SampleUserListApplication extends Application<SampleUserListConfigu
 
     @Override
     public void initialize(final Bootstrap<SampleUserListConfiguration> bootstrap) {
-        // TODO: application initialization
+
     }
 
     @Override
     public void run(final SampleUserListConfiguration configuration,
                     final Environment environment) {
-        // TODO: implement application
+        final UserListResource resource = new UserListResource();
+        environment.jersey().register(resource);
     }
 
 }
