@@ -8,7 +8,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * Created by mike on 12/3/17.
  */
-//@JsonInclude(JsonInclude.Include.NON_ABSENT)
 public class User {
 
     private Long id;

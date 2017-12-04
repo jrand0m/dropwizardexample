@@ -2,13 +2,13 @@
 logging:
 
   # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
-  level: ALL
+  level: INFO
 
   # Logger-specific levels.
   loggers:
 
     # Sets the level for 'com.example.app' to DEBUG.
-    com.jrandom.dropwizard.example: DEBUG
+    com.jrandom.dropwizard.example: INFO
 
     # Redirects SQL logs to a separate file
     org.hibernate.SQL:

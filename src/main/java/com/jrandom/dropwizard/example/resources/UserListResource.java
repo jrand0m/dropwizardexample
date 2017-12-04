@@ -31,6 +31,7 @@ public class UserListResource {
         return response;
     }
 
+
     @GET
     @Path("/{id}/")
     public Response getUser(@PathParam("id")  Long id){
