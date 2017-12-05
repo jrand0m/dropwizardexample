@@ -2,15 +2,13 @@ package com.jrandom.dropwizard.example.resources;
 
 import com.jrandom.dropwizard.example.UserUtils;
 import com.jrandom.dropwizard.example.models.User;
-import com.jrandom.dropwizard.example.testingframework.AbstractBaseFunctionalTest;
+import com.jrandom.dropwizard.example.testingframework.AdminResourceTest;
 import com.jrandom.dropwizard.example.testingframework.bo.UserAdminResourceBO;
 import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
 
-public class UserAdminResourceSmokeTest extends AbstractBaseFunctionalTest {
-
-    public UserAdminResourceBO bo = new UserAdminResourceBO();
+public class UserAdminResourceSmokeTest extends AdminResourceTest {
 
     @Test
     public void smokeTestGetUsers(){

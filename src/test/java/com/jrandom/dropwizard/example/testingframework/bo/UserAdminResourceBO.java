@@ -1,6 +1,7 @@
 package com.jrandom.dropwizard.example.testingframework.bo;
 
 import com.jrandom.dropwizard.example.models.User;
+import com.jrandom.dropwizard.example.models.ValidationError;
 import com.jrandom.dropwizard.example.testingframework.client.UserAdminResourceClient;
 import java.util.List;
 
@@ -25,4 +26,22 @@ public class UserAdminResourceBO {
     }
 
 
+    public int statusForGetUserRequest(long id) {
+        return client.getUserWithResponceObject(id).getStatusCode();
+    }
+
+    public int statusForDeleteUserRequest(long fakeId) {
+        return client.deleteUserWithResponceObject(fakeId).getStatusCode();
+    }
+
+    public int statusForPutUserRequest(User u) {
+        return client.putUserWithResponceObject(u).getStatusCode();
+    }
+
+    public ValidationError errorsForCreateUser(User u ) {
+        return client.postUserWithResponseObject(u).as(ValidationError.class);
+    }
+    public ValidationError errorsForUpdateUser(User u ) {
+        return client.putUserWithResponceObject(u).as(ValidationError.class);
+    }
 }
